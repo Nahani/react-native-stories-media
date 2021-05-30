@@ -13,7 +13,7 @@ export default memo(function Readmore({ onReadMore, title }: Props) {
       <View style={styles.readMore}>
         <Icon name="chevron-up" size={20} color="white" />
       </View>
-      <Text style={styles.readText}>{title ? title : "Read more"}</Text>
+      <Text style={styles.readText}>{title ? title : "Voir plus"}</Text>
     </TouchableOpacity>
   );
 });

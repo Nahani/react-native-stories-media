@@ -7,6 +7,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  StatusBar
 } from "react-native";
 import { StoryType } from "./src";
 
@@ -29,11 +30,15 @@ const Stories = (props: Props) => {
   const modalScroll = useRef(null);
 
   const onStorySelect = (index) => {
+    StatusBar.setBarStyle('light-content');
+    StatusBar.setBackgroundColor('black');
     setCurrentUserIndex(index);
     setModel(true);
   };
 
   const onStoryClose = () => {
+    StatusBar.setBarStyle('dark-content');
+    StatusBar.setBackgroundColor('rgba(255, 255, 255,0.6)');
     setModel(false);
   };
 

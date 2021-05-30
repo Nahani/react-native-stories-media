@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   ActivityIndicator,
   Dimensions,
   NativeTouchEvent,
   StyleSheet,
   View,
-  TouchableOpacity,
+  TouchableOpacity
 } from "react-native";
 
 import Modal from "react-native-modalbox";
@@ -98,14 +98,6 @@ const StoryContainer: React.FC<Props> = (props: Props) => {
     if (!isLoaded) {
       return (
         <View style={styles.loading}>
-          <View>
-            <Story
-              onImageLoaded={onImageLoaded}
-              pause
-              onVideoLoaded={onVideoLoaded}
-              story={story}
-            />
-          </View>
           <ActivityIndicator color="white" />
         </View>
       );
