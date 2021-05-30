@@ -98,7 +98,7 @@ const ProgressBar = (props: Props) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 4,
+    height: 2,
     flex: 1,
     backgroundColor: '#555',
     margin: 2,

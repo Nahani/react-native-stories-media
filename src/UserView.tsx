@@ -63,15 +63,10 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     marginLeft: 8,
   },
-  verifyIcon: {
-    width: 20,
-    height: 20,
-    marginLeft: 20,
-  },
   userView: {
     flexDirection: "row",
     position: "absolute",
-    top: 55,
+    top: 25,
     width: "98%",
     alignItems: "center",
   },
