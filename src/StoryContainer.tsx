@@ -8,7 +8,6 @@ import {
   TouchableOpacity
 } from "react-native";
 
-import Modal from "react-native-modalbox";
 import GestureRecognizer from "react-native-swipe-gestures";
 import Story from "./Story";
 import UserView from "./UserView";
@@ -172,15 +171,6 @@ const StoryContainer: React.FC<Props> = (props: Props) => {
             progress={{ id: currentIndex }}
           />
         </View>
-
-        <Modal
-          style={styles.modal}
-          position="bottom"
-          isOpen={isModelOpen}
-          onClosed={onReadMoreClose}
-        >
-          <View style={styles.bar} />
-        </Modal>
       </TouchableOpacity>
     </GestureRecognizer>
   );

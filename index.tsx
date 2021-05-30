@@ -144,9 +144,7 @@ const styles = new StyleSheet.create({
   },
   ItemSeparator: { height: 1, backgroundColor: "#ccc" },
   container: {
-    flex: 1,
-    backgroundColor: "rgba(255,255,255,255)",
-    paddingBottom: 5,
+    paddingTop: 10
   },
   circle: {
     width: 50,
