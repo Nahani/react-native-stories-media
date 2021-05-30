@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import { WebView } from "react-native-webview";
 import Modal from "react-native-modalbox";
 import GestureRecognizer from "react-native-swipe-gestures";
 import Story from "./Story";
@@ -165,9 +164,8 @@ const StoryContainer: React.FC<Props> = (props: Props) => {
             onClosePress={props.onClose}
           />
 
-          {isReadMore && (
-            <Readmore title={props.textReadMore} onReadMore={onReadMoreOpen} />
-          )}
+          <Readmore title={props.textReadMore} onReadMore={onReadMoreOpen} />
+
 
           <ProgressArray
             next={nextStory}
@@ -190,7 +188,6 @@ const StoryContainer: React.FC<Props> = (props: Props) => {
           onClosed={onReadMoreClose}
         >
           <View style={styles.bar} />
-          <WebView source={{ uri: stories[currentIndex].url_readmore }} />
         </Modal>
       </TouchableOpacity>
     </GestureRecognizer>

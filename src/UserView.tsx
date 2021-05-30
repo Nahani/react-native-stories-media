@@ -20,13 +20,13 @@ const diffDateWithNow = (date) => {
   let days = hours / 24;
   let current: string;
   if (days >= 1) {
-    current = days == 1 ? "dia" : "dias";
+    current = days == 1 ? "jour" : "jours";
     return Math.trunc(days) + " " + current;
   } else if (hours > 1) {
-    current = days == 1 ? "hora" : "horas";
+    current = days == 1 ? "h" : "h";
     return Math.trunc(hours) + " " + current;
   } else {
-    current = minutes == 1 ? "minuto" : "minutos";
+    current = minutes == 1 ? "minute" : "minutes";
     return Math.trunc(hours) + " " + current;
   }
 };
@@ -46,7 +46,7 @@ export default memo(function UserView(props: Props) {
 
         <Text style={styles.time}>
           {!!props.datePublication &&
-            `Publicado há ${diffDateWithNow(props.datePublication)}`}
+            `${diffDateWithNow(props.datePublication)}`}
         </Text>
       </View>
       <TouchableOpacity onPress={props.onClosePress}>
