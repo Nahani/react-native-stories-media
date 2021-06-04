@@ -86,7 +86,12 @@ const Stories = (props: Props) => {
     <View style={styles.container}>
       <FlatList
         data={props.data}
-        horizontal
+        //horizontal
+        ListFooterComponent={<View style={{ height: 100}}/>}
+        numColumns={2}
+        columnWrapperStyle={styles.row}
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
         keyExtractor={(item) => item.title}
         renderItem={({ item, index }) => (
           <View style={styles.boxStory}>
@@ -98,7 +103,7 @@ const Stories = (props: Props) => {
                 />
               </View>
 
-              <Text style={[styles.title, props.titleStyle]}>{item.title}</Text>
+              {/* <Text style={[styles.title, props.titleStyle]}>{item.title}</Text> */}
             </TouchableOpacity>
           </View>
         )}
@@ -140,31 +145,35 @@ const Stories = (props: Props) => {
 
 const styles = new StyleSheet.create({
   boxStory: {
-    marginLeft: 15,
+    marginHorizontal: 5,
+    maxWidth: '50%',
+    flex: 1
   },
   ItemSeparator: { height: 1, backgroundColor: "#ccc" },
-  container: {
-    paddingTop: 10
-  },
   circle: {
-    width: 50,
-    height: 50,
-    borderRadius: 60,
+    width: '100%',
+    height: 250,
+    borderRadius: 10,
     borderWidth: 3,
     borderColor: "#FFF",
   },
   superCircle: {
-    borderWidth: 3,
-    borderColor: "blue",
-    borderRadius: 60,
+    // borderWidth: 3,
+    // borderColor: "blue",
+    // borderRadius: 10,
   },
   modal: {
     flex: 1,
   },
   title: {
-    fontSize: 8,
+    fontSize: 15,
     textAlign: "center",
   },
+  row: {
+    flex: 1,
+    justifyContent: "space-around",
+    marginBottom: 5,
+  }
 });
 
 export default Stories;
