@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import { StoryType } from "./src";
 
-const { CubeNavigationHorizontal } = require("react-native-3dcube-navigation");
+import { CubeNavigationHorizontal } from 'react-native-3dcube-navigation';
 
 import StoryContainer from "./src/StoryContainer";
 
